@@ -19,10 +19,19 @@ export interface Collection {
 export class ImageListComponent implements OnInit {
 
   tiles: Tile[] = [
-    {cols: 1, rows: 1, src: '../assets/pictures/groupe_mariage.jpg'},
-    {cols: 2, rows: 2, src: '../assets/pictures/signature_Guillaume.jpg'},
-    {cols: 3, rows: 3, src: '../assets/pictures/signature_Marianne.jpg'},
+    {cols: 2, rows: 1, src: '../assets/pictures/groupe_mariage.jpg'},
+    {cols: 2, rows: 1, src: '../assets/pictures/groupe_mariage.jpg'},
+    {cols: 1, rows: 3, src: '../assets/pictures/signature_Marianne.jpg'},
+    {cols: 1, rows: 2, src: '../assets/pictures/signature_Guillaume.jpg'},
     {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
+    {cols: 2, rows: 1, src: '../assets/pictures/groupe_mariage.jpg'},
+    {cols: 1, rows: 2, src: '../assets/pictures/signature_Guillaume.jpg'},
+    {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
+    {cols: 1, rows: 3, src: '../assets/pictures/signature_Marianne.jpg'},
+    {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
+    {cols: 1, rows: 2, src: '../assets/pictures/signature_Guillaume.jpg'},
+    {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
+    {cols: 1, rows: 3, src: '../assets/pictures/signature_Marianne.jpg'},
   ];
 
   collections: Collection[] = [

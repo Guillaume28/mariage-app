@@ -4,7 +4,7 @@
     <div class="text" id="text-header-2">Mariage Marianne et Guillaume</div>
 
     <mat-form-field>
-      <mat-label>Favorite food</mat-label>
+      <mat-label>Mongolo</mat-label>
       <mat-select>
         <mat-option *ngFor="let collection of collections" [value]="collection.value">
           {{collection.viewValue}}
@@ -15,12 +15,11 @@
 
   <div class="mdc-grid-list mdc-grid-list--tile-aspect-16x9">
     <mat-grid-list [responsive]="responsive"
-                   rowHeight=""
                    gutterSize="8px">
-      <mat-grid-tile id="toto" *ngFor="let tile of tiles"
+      <mat-grid-tile *ngFor="let tile of tiles"
                      [colspan]="tile.cols"
-                     [rowspan]="tile.rows"
-                     [style.background-image]="'url('+tile.src+')'">
+                     [rowspan]="tile.rows">
+        <img id="grid" [src]="tile.src" alt="">
       </mat-grid-tile>
     </mat-grid-list>
   </div>
