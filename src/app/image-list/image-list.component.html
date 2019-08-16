@@ -4,7 +4,7 @@
     <div class="text" id="text-header-2">Mariage Marianne et Guillaume</div>
 
     <mat-form-field>
-      <mat-label>Mongolo</mat-label>
+      <mat-label>Collections</mat-label>
       <mat-select>
         <mat-option *ngFor="let collection of collections" [value]="collection.value">
           {{collection.viewValue}}
@@ -13,29 +13,11 @@
     </mat-form-field>
   </div>
 
-  <!-- <div class="mdc-grid-list mdc-grid-list--tile-aspect-16x9">
-    <mat-grid-list [responsive]="responsive"
-                   gutterSize="8px">
-      <mat-grid-tile id ="gridTile" *ngFor="let tile of tiles"
-                     [colspan]="tile.cols"
-                     [rowspan]="tile.rows"
-                     [style.marginBottom]="'-1.25em'" >
-        <img id="grid" [src]="tile.src" alt="">
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
-  -->
-
-  <div class="demo-content">
-    <mdc-image-list [masonry]="true" class="masonry-image-list">
-      <mdc-image-list-item *ngFor="let item of masonryImages">
-        <!--<img mdcImageListImage [src]="item.image" />-->
-        <img mdcImageListImage src="{{item.image}}" />
-        <mdc-image-list-supporting>
-          <span mdcImageListLabel>Text label</span>
-        </mdc-image-list-supporting>
-      </mdc-image-list-item>
-    </mdc-image-list>
-  </div>
+  <ngx-masonry-gallery
+    id="masonry"
+    [width]='400'
+    [images]='images'
+    [gutter]="10"
+    [verticalGutter]="10"></ngx-masonry-gallery>
 
 </div>

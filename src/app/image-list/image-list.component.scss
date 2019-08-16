@@ -1,9 +1,5 @@
 @import "~@angular-mdc/theme/material";
 
-$mdc-theme-primary: #1565c0;
-$mdc-theme-secondary: #388e3c;
-$mdc-theme-background: #fff;
-
 #text-header-2 {
   display: inline-block;
   color: Black;
@@ -12,25 +8,6 @@ $mdc-theme-background: #fff;
   margin: 1%;
 }
 
-.demo-content {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin: 15px;
+#masonry {
 
-  h3 {
-    margin-top: .3em;
-  }
 }
-
-.demo-content--column {
-  display: flex;
-  flex-direction: column;
-}
-
-.demo-content--row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px 0 10px 0;
-}
-

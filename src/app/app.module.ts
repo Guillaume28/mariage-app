@@ -19,6 +19,7 @@ import {
 } from '@angular/material';
 import {MatGridListResponsiveModule} from '../lib/mat-grid-list-responsive.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MasonryGalleryModule} from 'ngx-masonry-gallery';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MasonryGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

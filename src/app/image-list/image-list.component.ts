@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {IMasonryGalleryImage} from 'ngx-masonry-gallery';
 
 export interface Collection {
   value: string;
@@ -12,20 +13,20 @@ export interface Collection {
 })
 export class ImageListComponent implements OnInit {
 
-  masonryImages: [
-    { image: '../assets/pictures/groupe_mariage.jpg' },
-    { image: '../assets/pictures/groupe_mariage.jpg' },
-    { image: '../assets/pictures/signature_Marianne.jpg' },
-    { image: '../assets/pictures/signature_Guillaume.jpg' },
-    { image: '../assets/pictures/guillaume_Marianne_drapeau.jpg' },
-    { image: '../assets/pictures/signature_Marianne.jpg' },
-    { image: '../assets/pictures/signature_Marianne.jpg' },
-    { image: '../assets/pictures/guillaume_Marianne_drapeau.jpg' },
-    { image: '../assets/pictures/groupe_mariage.jpg' },
-    { image: '../assets/pictures/groupe_mariage.jpg' },
-    { image: '../assets/pictures/guillaume_Marianne_drapeau.jpg' },
-    { image: '../assets/pictures/signature_Marianne.jpg' },
-    { image: '../assets/pictures/signature_Guillaume.jpg' }
+  masonryImages: string[] = [
+    '../assets/pictures/groupe_mariage.jpg' ,
+    '../assets/pictures/groupe_mariage.jpg' ,
+    '../assets/pictures/signature_Marianne.jpg' ,
+    '../assets/pictures/signature_Guillaume.jpg' ,
+    '../assets/pictures/guillaume_Marianne_drapeau.jpg' ,
+    '../assets/pictures/signature_Marianne.jpg' ,
+    '../assets/pictures/signature_Marianne.jpg' ,
+    '../assets/pictures/guillaume_Marianne_drapeau.jpg' ,
+    '../assets/pictures/groupe_mariage.jpg' ,
+    '../assets/pictures/groupe_mariage.jpg' ,
+    '../assets/pictures/guillaume_Marianne_drapeau.jpg' ,
+    '../assets/pictures/signature_Marianne.jpg' ,
+    '../assets/pictures/signature_Guillaume.jpg'
   ];
 
   collections: Collection[] = [
@@ -35,6 +36,12 @@ export class ImageListComponent implements OnInit {
     {value: 'repas', viewValue: 'Repas'},
     {value: 'apres-mariage', viewValue: 'Après-mariage'}
   ];
+
+  public get images(): IMasonryGalleryImage[] {
+    return this.masonryImages.map(m => <IMasonryGalleryImage> {
+      imageUrl: m
+    });
+  }
 
   constructor() {
   }
