@@ -1,10 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-
-export interface Tile {
-  cols: number;
-  rows: number;
-  src: any;
-}
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 export interface Collection {
   value: string;
@@ -18,20 +12,20 @@ export interface Collection {
 })
 export class ImageListComponent implements OnInit {
 
-  tiles: Tile[] = [
-    {cols: 2, rows: 1, src: '../assets/pictures/groupe_mariage.jpg'},
-    {cols: 2, rows: 1, src: '../assets/pictures/groupe_mariage.jpg'},
-    {cols: 1, rows: 3, src: '../assets/pictures/signature_Marianne.jpg'},
-    {cols: 1, rows: 2, src: '../assets/pictures/signature_Guillaume.jpg'},
-    {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
-    {cols: 2, rows: 1, src: '../assets/pictures/groupe_mariage.jpg'},
-    {cols: 1, rows: 2, src: '../assets/pictures/signature_Guillaume.jpg'},
-    {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
-    {cols: 1, rows: 3, src: '../assets/pictures/signature_Marianne.jpg'},
-    {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
-    {cols: 1, rows: 2, src: '../assets/pictures/signature_Guillaume.jpg'},
-    {cols: 1, rows: 1, src: '../assets/pictures/guillaume_Marianne_drapeau.jpg'},
-    {cols: 1, rows: 3, src: '../assets/pictures/signature_Marianne.jpg'},
+  masonryImages: [
+    { image: '../assets/pictures/groupe_mariage.jpg' },
+    { image: '../assets/pictures/groupe_mariage.jpg' },
+    { image: '../assets/pictures/signature_Marianne.jpg' },
+    { image: '../assets/pictures/signature_Guillaume.jpg' },
+    { image: '../assets/pictures/guillaume_Marianne_drapeau.jpg' },
+    { image: '../assets/pictures/signature_Marianne.jpg' },
+    { image: '../assets/pictures/signature_Marianne.jpg' },
+    { image: '../assets/pictures/guillaume_Marianne_drapeau.jpg' },
+    { image: '../assets/pictures/groupe_mariage.jpg' },
+    { image: '../assets/pictures/groupe_mariage.jpg' },
+    { image: '../assets/pictures/guillaume_Marianne_drapeau.jpg' },
+    { image: '../assets/pictures/signature_Marianne.jpg' },
+    { image: '../assets/pictures/signature_Guillaume.jpg' }
   ];
 
   collections: Collection[] = [
@@ -41,8 +35,6 @@ export class ImageListComponent implements OnInit {
     {value: 'repas', viewValue: 'Repas'},
     {value: 'apres-mariage', viewValue: 'Après-mariage'}
   ];
-
-  responsive = true;
 
   constructor() {
   }
