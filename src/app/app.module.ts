@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import { AppMaterialModule } from './material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {AppMaterialModule} from './material.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import 'hammerjs';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -20,6 +20,7 @@ import {
 import {MatGridListResponsiveModule} from '../lib/mat-grid-list-responsive.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MasonryGalleryModule} from 'ngx-masonry-gallery';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {MasonryGalleryModule} from 'ngx-masonry-gallery';
     AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    MasonryGalleryModule
+    MasonryGalleryModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

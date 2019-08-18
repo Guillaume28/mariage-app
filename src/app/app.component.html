@@ -1,15 +1,18 @@
-<div>
-  <div id="image-header">
-    <div class="text" id="text-header">Mariage Marianne et Guillaume</div>
+<div class="container">
 
-    <button id ="menu" mat-button [matMenuTriggerFor] = "menu">Menu</button>
-    <mat-menu #menu = "matMenu">
-      <button mat-menu-item routerLinkActive="active" routerLink="auth">Authentification</button>
-      <button mat-menu-item routerLinkActive="active" routerLink="favorites">Favoris</button>
-    </mat-menu>
+  <img id="image-header" src="../assets/pictures/groupe_mariage.jpg" style="width:100%;">
 
-  </div>
+  <div class="text" id="text-header">Mariage Marianne et Guillaume</div>
+
+  <button id="menu" mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLinkActive="active" routerLink="auth">Authentification</button>
+    <button mat-menu-item routerLinkActive="active" routerLink="favorites">Favoris</button>
+  </mat-menu>
+
 </div>
+
 <app-image-list></app-image-list>
 <div class="container">
   <div class="row">
