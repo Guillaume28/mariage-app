@@ -21,6 +21,8 @@ import {MatGridListResponsiveModule} from '../lib/mat-grid-list-responsive.modul
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MasonryGalleryModule} from 'ngx-masonry-gallery';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {NgxMasonryModule} from 'ngx-masonry';
+import {GalleryModule} from '@ks89/angular-modal-gallery';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatGridListModule,
-    MatSlideToggleModule,
-    MatGridListResponsiveModule,
-    MatFormFieldModule,
     MatSelectModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -46,7 +44,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     FormsModule,
     ReactiveFormsModule,
     MasonryGalleryModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxMasonryModule,
+    GalleryModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
